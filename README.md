@@ -12,12 +12,11 @@ $ cd my-project
 $ rm -Rf .git
 ```
 
-`npm`, `bower` and `gulp` should take care of you from there.
+`npm` should take care of you from there.
 
 ```
-$ npm install
-$ bower install
-$ gulp webserver
+$ ./run npm install --unsafe-perm
+$ ./run npm start
 ```
 
 Your web application should now be available at [http://localhost:8000/](http://localhost:8000/).

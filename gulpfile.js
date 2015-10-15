@@ -44,9 +44,7 @@ gulp.task('serve', function () {
             host: '0.0.0.0',
             port: 3000,
             fallback: 'index.html',
-            path: './public',
             livereload: true,
-            directoryListing: true,
             open: true
         }));
 
@@ -70,4 +68,4 @@ gulp.task('watch', function () {
   gulp.watch('app/js/**/*.js', [ 'js' ]);
 });
 
-gulp.task('default', [ 'js', 'static', 'serve', 'watch' ]); 
+gulp.task('default', [ 'js', 'static', 'watch', 'serve' ]); 
