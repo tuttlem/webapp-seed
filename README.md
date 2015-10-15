@@ -19,6 +19,6 @@ $ ./run npm install --unsafe-perm
 $ ./run npm start
 ```
 
-Your web application should now be available at [http://localhost:8000/](http://localhost:8000/).
+Your web application should now be available at [http://localhost:3000/](http://localhost:3000/).
 
-When you're ready to prepare a build of your application, the default `gulp` action will create a `build` directory that can be used as the deployment package.
+As a `postinstall` script from `npm`, the default `gulp` action is invoked which will prepare your application into the `public` folder.
