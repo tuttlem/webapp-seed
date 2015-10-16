@@ -1,6 +1,6 @@
-# Webapp seed project
+# Webapp seed project (require branch)
 
-This is a barebones web application project structure that will get your development bootstrap underway. The focus of this structure is about getting `npm`, `gulp` and `bower` up and running without much effort. Complexity of the run environment has also been offloaded to a `run` script that will fire up disposable docker containers. This is so that the developer is not expected to install any extra dependencies on their host; just docker..
+This seed project uses [RequireJS](http://requirejs.org/) for its dependency management.
 
 ## Getting started
 
