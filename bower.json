@@ -1,5 +1,5 @@
 {
-  "name": "webapp-structure",
+  "name": "angular-structure",
   "version": "0.0.0",
   "moduleType": [
     "node"
@@ -14,5 +14,10 @@
     "tests"
   ],
   "dependencies": {
+    "requirejs": "~2.1.19",
+    "angular": "~1.4.2",
+    "angular-route": "~1.4.2",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
   }
 }

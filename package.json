@@ -1,33 +1,30 @@
 {
-    "name": "webapp-seed",
-    "version": "1.0.0",
-    "description": "A simple seed project for web applications",
-    "main": "index.js",
-    "dependencies": {},
-    "devDependencies": {
-        "bower": "^1.5.3",
-        "gulp": "^3.9.0",
-        "gulp-babel": "^5.2.1",
-        "gulp-nodemon": "^2.0.4",
-        "gulp-replace": "^0.5.4",
-        "gulp-uglify": "^1.4.2",
-        "gulp-webserver": "^0.9.1",
-        "nodemon": "^1.7.1"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node_modules/.bin/gulp",
-        "postinstall": "node_modules/.bin/bower install --allow-root"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/tuttlem/webapp-seed.git"
-    },
-    "author": "Michael Tuttle <tuttlem@gmail.com>",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/tuttlem/webapp-seed/issues"
-    },
-    "homepage": "https://github.com/tuttlem/webapp-seed#readme"
+  "name": "angular-seed",
+  "version": "1.0.0",
+  "description": "A simple seed project for AngularJS applications",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuttlem/angular-seed.git"
+  },
+  "author": "Michael Tuttle <tuttlem@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuttlem/angular-seed/issues"
+  },
+  "homepage": "https://github.com/tuttlem/angular-seed#readme"
 }
-
