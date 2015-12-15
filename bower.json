@@ -18,6 +18,8 @@
     "angular": "~1.4.2",
     "angular-route": "~1.4.2",
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "AngularJS-OAuth2": "angularjs-oauth2#~1.0.5",
+    "ngstorage": "~0.3.10"
   }
 }

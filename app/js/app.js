@@ -6,21 +6,29 @@ define([
   'controllers',
   'filters',
   'services',
-  'directives' 
+  'directives',
+  'angularJSOAuth2'
 ], function (angular) {
 
   var seedApp = angular.module('seedApp', [
     'ngRoute',
     'seedControllers',
     'seedFilters',
-    'seedServices'
+    'seedServices',
+    'afOAuth2'
   ]);
 
   seedApp.config([ '$routeProvider', function ($routeProvider) {
 
-    $routeProvider.otherwise({
-      redirectTo: '/'
-    });
+    $routeProvider
+      .when('/', {
+        templateUrl: 'partials/home.html',
+        controller: 'HomeController',
+        requireToken: true
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
 
   }]);
 

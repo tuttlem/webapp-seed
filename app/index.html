@@ -11,8 +11,17 @@
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div ng-view></div>
 
+    <oauth2 
+       authorization-url="https://gluu/oxauth/authorize"
+       sign-out-url=""
+       sign-out-append-token="false"
+       client-id="@!7A80.EC31.B8D8.B8CD!0001!F333.4455!0008!463B.4B10"
+       redirect-url="http://localhost:3000/"
+       response-type="id_token token"
+       scope="openid profile">
+    </oauth2>
     <script data-main="js/require-conf" src="bower_components/requirejs/require.js"></script>
   </body>
 </html>
