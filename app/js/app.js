@@ -10,6 +10,14 @@ define([
   'angularJSOAuth2'
 ], function (angular) {
 
+  /* important broadcast messages from afOAuth2
+   * oauth2:authError
+   * oauth2:authSuccess
+   * oauth2:authExpired
+   * oauth2:unauthorized
+   * oauth2:internalservererror
+   */
+  
   var seedApp = angular.module('seedApp', [
     'ngRoute',
     'seedControllers',

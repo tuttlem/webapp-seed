@@ -5,8 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bower": "^1.4.1",
-    "express": "^4.13.3",
-    "gulp": "^3.9.0"
+    "express": "^4.13.3"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -23,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuttlem/angular-seed.git"
+    "url": "git+https://github.com/tuttlem/webapp-seed.git"
   },
   "author": "Michael Tuttle <tuttlem@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tuttlem/angular-seed/issues"
+    "url": "https://github.com/tuttlem/webapp-seed/issues"
   },
-  "homepage": "https://github.com/tuttlem/angular-seed#readme"
+  "homepage": "https://github.com/tuttlem/webapp-seed#readme"
 }
