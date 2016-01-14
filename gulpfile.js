@@ -10,10 +10,10 @@ var gulp = require('gulp'),
 gulp.task('js', function () {
 
   return gulp.src(['app/js/**/*.js'])
-    .pipe(replace('bower_components', 'lib'))
-    .pipe(gulp.dest('public/js'))
     .pipe(babel())
-    .pipe(uglify());
+    .pipe(uglify())
+    .pipe(replace('bower_components', 'lib'))
+    .pipe(gulp.dest('public/js'));
 
 });
  
