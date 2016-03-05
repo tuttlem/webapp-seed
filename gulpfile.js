@@ -1,7 +1,6 @@
 
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
-    ts = require('gulp-typescript'),
     uglify = require('gulp-uglify'),
     replace = require('gulp-replace'),
     nodemon = require('gulp-nodemon'),
@@ -12,16 +11,6 @@ gulp.task('js', function () {
 
     return gulp.src(['app/js/**/*.js'])
         .pipe(babel())
-        .pipe(uglify())
-        .pipe(replace('bower_components', 'lib'))
-        .pipe(gulp.dest('public/js'));
-
-});
-
-gulp.task('ts', function () {
-
-    return gulp.src(['app/js/**/*.ts'])
-        .pipe(ts())
         .pipe(uglify())
         .pipe(replace('bower_components', 'lib'))
         .pipe(gulp.dest('public/js'));
@@ -44,6 +33,9 @@ gulp.task('static', function () {
     gulp.src('app/css/**')
         .pipe(gulp.dest('public/css'));
 
+    gulp.src('app/js/**/*.ts')
+        .pipe(gulp.dest('public/js'));
+
     gulp.src('app/partials/**')
         .pipe(gulp.dest('public/partials'));
 
@@ -55,7 +47,6 @@ gulp.task('serve', function () {
         .pipe(webserver({
             host: '0.0.0.0',
             port: 3000,
-            fallback: 'index.html',
             livereload: true,
             open: true
         }));
@@ -70,7 +61,6 @@ gulp.task('watch', function () {
     gulp.watch('app/partials/**', [ 'static' ]);
 
     gulp.watch('app/js/**/*.js', [ 'js' ]);
-    gulp.watch('app/js/**/*.ts', [ 'ts' ]);
 });
 
-gulp.task('default', [ 'js', 'ts', 'static', 'watch', 'serve' ]); 
+gulp.task('default', [ 'js', 'static', 'watch', 'serve' ]); 
