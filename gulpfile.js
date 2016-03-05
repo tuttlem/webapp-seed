@@ -1,6 +1,7 @@
 
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
+    react = require('gulp-react'),
     uglify = require('gulp-uglify'),
     replace = require('gulp-replace'),
     nodemon = require('gulp-nodemon'),
@@ -10,10 +11,21 @@ var gulp = require('gulp'),
 gulp.task('js', function () {
 
     return gulp.src(['app/js/**/*.js'])
-        .pipe(replace('bower_components', 'lib'))
-        .pipe(gulp.dest('public/js'))
         .pipe(babel())
-        .pipe(uglify());
+        .pipe(uglify())
+        .pipe(replace('bower_components', 'lib'))
+        .pipe(gulp.dest('public/js'));
+
+});
+
+/* react jsx templates need to be converted */
+gulp.task('jsx', function () {
+
+    return gulp.src(['app/js/**/*.jsx'])
+        .pipe(react())
+        .pipe(uglify())
+        .pipe(replace('bower_components', 'lib'))
+        .pipe(gulp.dest('public/js'));
 
 });
 
@@ -59,6 +71,7 @@ gulp.task('watch', function () {
     gulp.watch('app/partials/**', [ 'static' ]);
 
     gulp.watch('app/js/**/*.js', [ 'js' ]);
+    gulp.watch('app/js/**/*.jsx', [ 'jsx' ]);
 });
 
-gulp.task('default', [ 'js', 'static', 'watch', 'serve' ]); 
+gulp.task('default', [ 'js', 'jsx', 'static', 'watch', 'serve' ]); 
