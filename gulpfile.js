@@ -58,4 +58,15 @@ gulp.task('watch', function () {
   gulp.watch('app/js/**/*.js', [ 'js' ]);
 });
 
+<<<<<<< HEAD
 gulp.task('default', [ 'js', 'static', 'serve', 'watch' ]); 
+=======
+/* this action is used just to build the application
+   into the /public folder so it can be picked up by
+   the docker build process */
+gulp.task('build', [ 'js', 'static' ]);
+
+/* default action started when no configuration is 
+   given to the invocation script */
+gulp.task('default', [ 'js', 'static', 'watch', 'serve' ]); 
+>>>>>>> 0d5d784
