@@ -19,8 +19,6 @@ Your web application should now be available at [http://localhost:3000/](http://
 
 As a convenience controllers, services, directives, partials, etc. have had files created for them.
 
-<<<<<<< HEAD
-=======
 As a `postinstall` script from `npm`, the default `gulp` action is invoked which will prepare your application into the `public` folder.
 
 ## Deployment
@@ -54,4 +52,3 @@ Alternatively, you can run the application in the foreground just to see that it
 $ docker run -ti --rm -p 9000:80 my-company/my-app:latest
 ```
 
->>>>>>> 0d5d784
